@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Landing Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    /* Default image (Desktop) */
+    .responsive-img {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    .img-desktop {
+      display: block;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 90%;
+      max-width: 300px;
+      margin: 20px auto;
+      padding: 14px 20px;
+      background-color: #a0041e;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #7c0315;
+    }
+
+    /* Tablet view */
+    @media (max-width: 1024px) {
+      .img-desktop {
+        display: none;
+      }
+      .img-tablet {
+        display: block;
+      }
+    }
+
+    /* Mobile view */
+    @media (max-width: 600px) {
+      .img-tablet {
+        display: none;
+      }
+      .img-mobile {
+        display: block;
+      }
+
+      .btn {
+        font-size: 16px;
+        padding: 12px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Desktop Image -->
+    <img src="1.png" alt="Landing Desktop" class="responsive-img img-desktop" />
+    
+    <!-- Tablet Image -->
+    <img src="1.png" alt="Landing Tablet" class="responsive-img img-tablet" />
+
+    <!-- Mobile Image -->
+    <img src="1.png" alt="Landing Mobile" class="responsive-img img-mobile" />
+
+    <!-- Button -->
+    <button class="btn" onclick="window.location.href='https://your-redirect-link.com'">
+      Click to Shop Now
+    </button>
+  </div>
+
+</body>
+</html>

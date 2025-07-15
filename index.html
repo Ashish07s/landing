@@ -6,14 +6,75 @@
   <title>Responsive Landing Page</title>
   <link rel="preload" as="image" href="landing-desktop.webp" />
   <style>
-    *{box-sizing:border-box}body{margin:0;padding:0;font-family:'Segoe UI',sans-serif;background-color:#f4f4f4}
-    .container{width:100%;max-width:700px;margin:50px auto;background:#fff;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1);overflow:hidden;text-align:center}
-    .responsive-img{width:100%;height:auto;display:none}
-    .img-desktop{display:block}
-    .btn{display:inline-block;width:90%;max-width:300px;margin:20px auto;padding:14px 20px;background-color:#a0041e;color:#fff;font-size:18px;border:none;border-radius:5px;cursor:pointer;text-transform:uppercase;transition:background 0.3s ease}
-    .btn:hover{background-color:#7c0315}
-    @media(max-width:1024px){.img-desktop{display:none}.img-tablet{display:block}}
-    @media(max-width:600px){.img-tablet{display:none}.img-mobile{display:block}.btn{font-size:16px;padding:12px 18px}}
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .responsive-img {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    .img-desktop {
+      display: block;
+    }
+
+    /* Updated Button Style */
+    .btn-custom {
+      display: inline-block;
+      background-color: #5B341B; /* Dark brown */
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 50px; /* Fully rounded */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 20px auto;
+    }
+
+    .btn-custom:hover {
+      background-color: #422713; /* Slightly darker brown */
+    }
+
+    @media (max-width: 1024px) {
+      .img-desktop {
+        display: none;
+      }
+      .img-tablet {
+        display: block;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .img-tablet {
+        display: none;
+      }
+      .img-mobile {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
@@ -29,8 +90,8 @@
     <img src="2.webp" alt="Landing Mobile" class="responsive-img img-mobile" loading="lazy" />
 
     <!-- Button -->
-    <button class="btn" onclick="window.location.href='https://www.sruthilayafinejewellery.com/shop-now'">
-      Click to Shop Now
+    <button class="btn-custom" onclick="window.location.href='https://www.sruthilayafinejewellery.com/shop-now'">
+      PRE-BOOK ACCESS NOW
     </button>
   </div>
 
